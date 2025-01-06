@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Practice</title>
+</head>
+<body>
+
+    <h1>10</h1>
+    <h1>20</h1>
+    <h1>30</h1>
+    <h1>40</h1>
+
+    <input type="number"/>
+    <input type="number"/>
+    <input type="number"/>
+    <input type="submit" onclick="fun1()">
+
+    <h2 class="h2-check1">Hello</h2>
+    <h2 id="h2-check2">20</h2>
+    <input type="submit" onclick="fun2()">
+
+    <script>
+
+    function fun1(){
+      var tags=document.getElementsByTagName("h1");
+      var sum=0;
+      for(i=0;i<tags.length;i++){
+         sum+=Number(tags[i].innerHTML);
+      }
+      tags=document.getElementsByTagName("input");
+      for(i=0;i<tags.length;i++){
+         sum+=Number(tags[i].value);
+      }
+      console.log("Sum = ",sum);
+    }
+    function fun2(){
+     tags1=document.getElementById("h2-check2");
+     let sum2=0;
+     sum2+=Number(tags1.innerHTML);
+     sum2+=10
+     tags1.innerHTML=sum2;
+    }
+    
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,16 @@
+java Script
+
+- dynamic achievement of data
+- OOPS and DOM
+- Internal and External (.js)
+- <script></script>
+
+
+<h1>hello</h1>
+<h1>hello1</h1>
+<script>
+var tags=console.log(document.getElementsAllByTagName("h1"));
+for(i=0;i<tags.length;i++){
+    console.log(tags[i].innerHTML);
+}
+</script>

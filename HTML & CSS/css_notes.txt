@@ -1,0 +1,5 @@
+css styling
+
+1.For new tab redirection 
+  <a href="https/ff" direct="_blank">value</a>
+
