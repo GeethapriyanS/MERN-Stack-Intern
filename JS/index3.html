@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array of Objects to Table</title>
+    <style>
+        body{
+            font-family: monospace;
+            font-size: 28px;
+        }
+        table {
+            width: 50%;
+            border-collapse: collapse;
+            margin: 20px auto;
+            margin-top: 100px;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+    <table id="data-table">
+        <thead>
+            <tr>
+                <th>Username</th>
+                <th>Password</th>
+                <th>Age</th>
+                <th>CGPA</th>
+                <th>Dept</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+    <table id="results">
+         <thead>
+            <tr>
+                <th>Username</th>
+                <th>Grade</th>
+            </tr>
+         </thead>
+         <tbody>
+         </tbody>
+    </table>
+
+    <script>
+        const users = [
+            { username: 'user1', password: 'pass123' ,age: '18', cgpa:8.5, dept:'CSE'},
+            { username: 'user2', password: 'pass456' ,age: '19', cgpa:8.6, dept:'CSE'},
+            { username: 'user3', password: 'pass789' ,age: '17', cgpa:9.0, dept:'CSE'},
+            { username: 'user4', password: 'pass012' ,age: '16', cgpa:7.0, dept:'CSE'},
+        ];
+const tableBody = document.getElementById('data-table').querySelector('tbody');
+let rows = '';
+users.forEach(user => {
+    rows += `
+        <tr>
+            <td>${user.username}</td>
+            <td>${user.password}</td>
+            <td>${user.age}</td>
+            <td>${user.cgpa}</td>
+            <td>${user.dept}</td>
+        </tr>
+    `;
+});
+tableBody.innerHTML = rows;
+
+
+var tags2=users.map(user => {
+    if(user.cgpa >= 9.5){
+        return "O";
+    }
+    else if(user.cgpa >=9.0){
+        return "A+";
+    }
+    else if(user.cgpa >=8.5){
+        return "A";
+    }
+    else if(user.cgpa >=8.0){
+        return "B+";
+    }
+    else if(user.cgpa >=7.5){
+        return "B";
+    }
+    else{
+        return "C";
+    }
+    });
+    console.log(tags2);
+    const tableBody1 = document.getElementById('results').querySelector('tbody');
+    let rows1 = '';
+    users.forEach(user => {
+    rows1 += `
+        <tr>
+            <td>${user.username}</td>
+            <td>${tags2}</td>
+        </tr>
+    `;
+    });
+    tableBody1.innerHTML = rows1;
+</script>
+</body>
+</html>

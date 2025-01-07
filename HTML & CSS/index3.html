@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model</title>
+    <style>
+        body{
+            background-color: lightgray;
+            font-family: monospace;
+        }
+        input{
+            font-family: inherit;
+            border-radius: 4px;
+        }
+        #formdata{
+            border: 2px solid black;
+            background-color: rgb(58, 58, 58);
+            width: 300px;
+            height: 400px;
+            display: inline-block;
+            padding: 20px;
+            margin-left:40%;
+            margin-top: 10%;
+            border-radius: 8px;
+            color: white;
+        }
+        .heading{
+            text-shadow: 1px 2px white;
+            font-size:30px;
+            text-align: center;
+        }
+        #one,#two,#three,#four{
+            margin-top: 50px;
+            font-size: 20px;
+        }
+        #butt{
+            margin-top: 60px;
+            margin-left: 100px;
+        }
+        #butt > button{
+            background-color: rgb(150, 149, 149);
+            width: 100px;
+            height: 40px;
+            color: whitesmoke;
+            font-weight:900;
+            font-size: 17px;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+     <div id="formdata">
+            <h2 class="heading">LOGIN</h2>
+            <div id="one">
+            <label for="firstname">Firstname :</label>
+            <input type="text" name="firstname" id="firstname" required>
+            <br>
+            </div>
+            <div id="two">
+            <label for="Password">Password&nbsp;&nbsp;:</label>
+            <input type="password" name="Password" id="Password" required>
+            <br>
+            </div>
+            <div id="three">
+            <label for="email">Email &nbsp;&nbsp;&nbsp;&nbsp;:</label>
+            <input type="email" name="email" id="email" required>
+            <br>
+            </div>
+            <div id="butt">
+            <button onclick="fun1()">Submit</button>
+            </div>
+     </div>
+     <div id="four">
+        <h1 id="details"></h1>
+    </div>
+     <script>
+        var tags2=Array(3);
+        tags2[0]=prompt("Enter your first name : ");
+        tags2[1]=prompt("Enter your password : ");
+        tags2[2]=prompt("Enter your email : ");
+        document.getElementById("firstname").value=tags2[0];
+        document.getElementById("Password").value=tags2[1];
+        document.getElementById("email").value=tags2[2];
+        function fun1(){
+            let tags=document.getElementsByTagName("input");
+            for(let i=0;i<tags.length;i++){
+                console.log(tags[i].value);
+            }
+            if(tags.length===3){
+                var tags1=document.getElementById("details");
+                document.getElementById("formdata").style.display="none";
+                tags1.innerHTML="Welcome "+tags[0].value+" !!";
+            }else{
+                alert("Please fill all the fields");
+            }            
+        }
+     </script>
+</body>
+</html>
