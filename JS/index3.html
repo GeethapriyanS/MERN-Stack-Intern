@@ -4,26 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Array of Objects to Table</title>
-    <style>
-        body{
-            font-family: monospace;
-            font-size: 28px;
-        }
-        table {
-            width: 50%;
-            border-collapse: collapse;
-            margin: 20px auto;
-            margin-top: 100px;
-        }
-        th, td {
-            border: 1px solid black;
-            padding: 8px;
-            text-align: left;
-        }
-        th {
-            background-color: white;
-        }
-    </style>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <table id="data-table">
@@ -96,11 +77,11 @@ var tags2=users.map(user => {
     console.log(tags2);
     const tableBody1 = document.getElementById('results').querySelector('tbody');
     let rows1 = '';
-    users.forEach(user => {
+    users.forEach((user,index) => {
     rows1 += `
         <tr>
             <td>${user.username}</td>
-            <td>${tags2}</td>
+            <td>${tags2[index]}</td>
         </tr>
     `;
     });
