@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resize Image with Opacity</title>
+  <style>
+    #image-container {
+      position: relative;
+      display: inline-block;
+      width: 200px; 
+      height: auto;
+      opacity: 0.5;
+    }
+  
+    #stretched-img {
+      width: 400px; 
+      height: 300px; 
+      resize: both;
+      overflow: hidden;
+      display: block;
+    }
+  </style>
+  <body>
+  <div id="image-container">
+    <img src="./images/pexels-photo-1097456.webp" alt="Stretched Image" id="stretched-img">
+  </div>  
+</body>
+</html>
