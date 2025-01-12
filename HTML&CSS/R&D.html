@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>R&D</title>
+</head>
+<body>
+
+    <h1>Why Use Default Export?</h1>
+    <p>
+        In JavaScript ES6, the default keyword is used to export a single entity from a module, designating it as the default export.
+    </p>
+    <p>
+        <h2>What is Default Export?</h2> 
+        What is Default Export? Using export default allows you to export a single main item from a module. For example, in React, the component itself is often exported as the default export.
+    </p>
+    export default MyComponent;
+    import MyComponent from './MyComponent';
+    <p>
+        This syntax simplifies the import because you don't need to match the exported name with the import statement.
+    </p>
+    <h1>Why Use Capital Letters for Components?</h1>
+    <p>
+        In JavaScript, specifically in frameworks like React, it's a convention to use capital letters when defining components.
+         This helps distinguish components from regular HTML elements.
+    </p>
+    <p>
+        Component Naming Convention: In JSX (JavaScript XML), custom components should always start with a capital letter. For example, MyComponent. This convention allows React to distinguish between standard HTML elements and user-defined components. For instance, <div> represents a standard HTML element, while <MyComponent> refers to a custom component.
+    </p>
+    <p>
+        - <h2>Why Capitalize?</h2> If you use lowercase letters for components e.g.,myComponent, React would treat it as a string, 
+        resulting in it being interpreted as a regular DOM tag, which would lead to incorrect behavior.
+    </p>
+
+</body>
+</html>
