@@ -6,6 +6,8 @@ import Header from "./components/functionalComponets/Header";
 import Profile from "./components/functionalComponets/Profile";
 import ClassCompEG from "./components/classComponents/classCompEG";
 import Gallery from "./components/classComponents/Gallery";
+import About from "./components/functionalComponets/About";
+import Contact from "./components/functionalComponets/contact";
 
 const App = () => {
   return (
@@ -18,6 +20,8 @@ const App = () => {
       <Footer />
       <ClassCompEG />
       <Gallery />
+      <About Hello="Geethapriyan" />  {/* props Example */}
+      <Contact /> {/* state Example */}
     </div>
   );
 };
