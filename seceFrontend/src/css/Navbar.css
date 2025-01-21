@@ -1,21 +1,21 @@
 
-*{
-    font-family: monospace;
-    font-size: 20px;
-}
-.navbar{
-  font-family: monospace;
-  font-size: 15px;
-  list-style-type:none;
-  display:flex;
-  justify-content: space-evenly;
-  margin: 0;
-  padding: 20px;
-  background-color: black;
-}
-.link{
-    text-decoration:none;
-    color: white;
-    padding: 10px;
-}
+ *{
+     font-family: monospace;
+     font-size: 20px;
+ }
+ .navbar{
+   font-family: monospace;
+   font-size: 15px;
+   list-style-type:none;
+   display:flex;
+   justify-content: space-evenly;
+   margin: 0;
+   padding: 20px;
+   background-color: black;
+ }
+ .link{
+     text-decoration:none;
+     color: white;
+     padding: 10px;
+ }
 
