@@ -13,6 +13,7 @@ import {BrowserRouter ,Routes ,Route} from 'react-router-dom';
 
 const App = () => {
   return (
+
     <>
     <Navbar />
     <Header />
@@ -30,6 +31,7 @@ const App = () => {
      <Footer />
 
     {/* <Button label="Click Me" onClick={() => alert("Button clicked!")} /> */}
+    
     </>
   );
 };

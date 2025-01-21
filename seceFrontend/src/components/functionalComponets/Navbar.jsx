@@ -1,5 +1,6 @@
 import '../../css/Navbar.css'
 
+
 const Navbar = () =>{
    return (
     <header>
@@ -16,3 +17,4 @@ const Navbar = () =>{
    );
 };
 export default Navbar;
+
