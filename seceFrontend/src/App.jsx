@@ -13,12 +13,11 @@ import Navbar from "./components/functionalComponets/Navbar";
 
 const App = () => {
   return (
-
     <>
-    <Navbar />
-    <Header />
-
+   
      <BrowserRouter>
+     <Navbar />
+     <Header />
       <Routes>
        <Route path="/" element={<Home />}></Route>
        <Route path="/card" element={<Card title="Introduction" description="This is a simple card component." />}></Route>
@@ -26,12 +25,9 @@ const App = () => {
        <Route path="/profile" element={<Profile name="Geethapriyan S" age={20} profession="Developer" />}></Route>
        <Route path="/contact" element={<Contact />}></Route>   {/* state Example */}
        </Routes>
+      <Footer />
       </BrowserRouter>
-
-     <Footer />
-
     {/* <Button label="Click Me" onClick={() => alert("Button clicked!")} /> */}
-
     </>
   );
 };
