@@ -8,21 +8,29 @@ import ClassCompEG from "./components/classComponents/classCompEG";
 import Gallery from "./components/classComponents/Gallery";
 import About from "./components/functionalComponets/About";
 import Contact from "./components/functionalComponets/contact";
+import Navbar from "./components/functionalComponets/Navbar";
+import {BrowserRouter ,Routes ,Route} from 'react-router-dom';
 
 const App = () => {
   return (
-    <div>
-      <Home />
-      <Header />
-      <Card title="Introduction" description="This is a simple card component." />
-      <Profile name="John Doe" age={28} profession="Developer" />
-      <Button label="Click Me" onClick={() => alert("Button clicked!")} />
-      <Footer />
-      <ClassCompEG />
-      <Gallery />
-      <About Hello="Geethapriyan" />  {/* props Example */}
-      <Contact /> {/* state Example */}
-    </div>
+    <>
+    <Navbar />
+    <Header />
+
+    <BrowserRouter>
+     <Routes>
+      <Route path="/" element={<Home />}></Route>
+      <Route path="/card" element={<Card title="Introduction" description="This is a simple card component." />}></Route>
+      <Route path="/about" element={<About Hello="Geethapriyan" />}></Route> {/* props Example */}
+      <Route path="/profile" element={<Profile name="Geethapriyan S" age={20} profession="Developer" />}></Route>
+      <Route path="/contact" element={<Contact />}></Route>   {/* state Example */}
+     </Routes>
+     </BrowserRouter>
+
+     <Footer />
+
+    {/* <Button label="Click Me" onClick={() => alert("Button clicked!")} /> */}
+    </>
   );
 };
 
