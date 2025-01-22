@@ -17,3 +17,48 @@
      color: white;
      padding: 10px;
  }
+
+ /* Style for the dropdown container */
+
+.drop {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.hookslist {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  padding: 10px 0;
+  list-style: none;
+  border-radius: 5px;
+  margin: 0;
+  padding: 0;
+}
+
+.hookslist li {
+  padding: 10px 20px;
+  text-align: left;
+}
+
+.hookslist li:hover {
+  background-color: #f1f1f1;
+}
+
+.drop:hover .hookslist {
+  display: block;
+}
+
+.drop .link {
+  font-weight: bold;
+  text-decoration: none;
+  padding: 10px 15px;
+}
+
+.drop .link:hover {
+  color: #007bff; 
+}

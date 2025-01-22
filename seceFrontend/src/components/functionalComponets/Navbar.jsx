@@ -1,12 +1,13 @@
 import { useState } from "react";
 import "../../css/Navbar.css";
+import "../../css/UseEffectAPIimage.css"
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
-  var [dropdown, showdropdown] = useState(false);
-  const toggeledropdown = () => {
-    showdropdown((dropdown) => !dropdown);
-  };
+  // var [dropdown, showdropdown] = useState(false);
+  // const toggeledropdown = () => {
+  //   showdropdown((dropdown) => !dropdown);
+  // };
 
   return (
     <header>
@@ -38,7 +39,7 @@ const Navbar = () => {
             </Link>
           </li>
 
-          <div>
+          {/* <div>
             <span className="link" onMouseEnter={toggeledropdown}>
               Hooks
             </span>
@@ -61,7 +62,33 @@ const Navbar = () => {
                 </li>
               </ol>
             )}
-          </div>
+          </div> */}
+
+          <li className="drop">
+            <span className="link">Hooks</span>
+            <div className="hookslist">
+            <li>
+                  <Link to="/use-state" className="link">
+                    useState
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/use-effect" className="link">
+                    UseEffect
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/use-effect-api" className="link">
+                    UseEffectAPI
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/use-effect-api-img" className="link">
+                    UseEffectAPI
+                  </Link>
+                </li>
+            </div>
+          </li>
 
           <li>
             <Link to="/" className="link">

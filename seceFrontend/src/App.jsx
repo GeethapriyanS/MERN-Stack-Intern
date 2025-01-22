@@ -14,6 +14,7 @@ import SignUp from "./components/functionalComponets/SignUp";
 import UseState from "./components/functionalComponets/Hooks/UseState";
 import UseEffect from "./components/functionalComponets/Hooks/UseEffect";
 import UseEffectAPI from "./components/functionalComponets/Hooks/UseEffectAPI";
+import UseEffectAPIimage from "./components/functionalComponets/Hooks/UseEffectAPIimage";
 
 const App = () => {
   return (
@@ -26,6 +27,7 @@ const App = () => {
        <Route path="/use-state" element={<UseState />}></Route> 
        <Route path="/use-effect" element={<UseEffect />}></Route> 
        <Route path="/use-effect-api" element={<UseEffectAPI />}></Route> 
+       <Route path="/use-effect-api-img" element={<UseEffectAPIimage />}></Route> 
        <Route path="/about" element={<About Hello="Geethapriyan" />}></Route> {/* props Example */}
        <Route path="/profile" element={<Profile name="Geethapriyan S" age={20} profession="Developer" />}></Route>
        <Route path="/contact" element={<Contact />}></Route>   {/* state Example */}
