@@ -54,6 +54,11 @@ const Navbar = () => {
                     UseEffect
                   </Link>
                 </li>
+                <li>
+                  <Link to="/use-effect-api" className="link">
+                    UseEffectAPI
+                  </Link>
+                </li>
               </ol>
             )}
           </div>
