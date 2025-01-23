@@ -3,7 +3,7 @@ import Card from "./components/functionalComponets/Card";
 import Footer from "./components/functionalComponets/Footer";
 import Profile from "./components/functionalComponets/Profile";
 import About from "./components/functionalComponets/About";
-import Contact from "./components/functionalComponets/contact";
+import Contact from "./components/functionalComponets/Contact";
 import {BrowserRouter ,Routes ,Route} from 'react-router-dom';
 import SignUp from "./components/functionalComponets/SignUp";
 import UseState from "./components/functionalComponets/Hooks/UseState";
