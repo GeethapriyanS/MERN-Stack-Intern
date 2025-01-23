@@ -15,6 +15,10 @@ import UseState from "./components/functionalComponets/Hooks/UseState";
 import UseEffect from "./components/functionalComponets/Hooks/UseEffect";
 import UseEffectAPI from "./components/functionalComponets/Hooks/UseEffectAPI";
 import UseEffectAPIimage from "./components/functionalComponets/Hooks/UseEffectAPIimage";
+import UseRef from "./components/functionalComponets/Hooks/UseRef";
+import UseMemo from "./components/functionalComponets/Hooks/UseMemo";
+import UseCallback from "./components/functionalComponets/Hooks/UseCallback";
+import UseReducer from "./components/functionalComponets/Hooks/UseReducer";
 
 const App = () => {
   return (
@@ -28,6 +32,10 @@ const App = () => {
        <Route path="/use-effect" element={<UseEffect />}></Route> 
        <Route path="/use-effect-api" element={<UseEffectAPI />}></Route> 
        <Route path="/use-effect-api-img" element={<UseEffectAPIimage />}></Route> 
+       <Route path="/use-ref" element={<UseRef />}></Route> 
+       <Route path="/use-memo" element={<UseMemo />}></Route> 
+       <Route path="/use-callback" element={<UseCallback />}></Route> 
+       <Route path="/use-reducer" element={<UseReducer />}></Route> 
        <Route path="/about" element={<About Hello="Geethapriyan" />}></Route> {/* props Example */}
        <Route path="/profile" element={<Profile name="Geethapriyan S" age={20} profession="Developer" />}></Route>
        <Route path="/contact" element={<Contact />}></Route>   {/* state Example */}

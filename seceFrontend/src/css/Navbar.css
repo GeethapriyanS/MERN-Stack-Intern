@@ -29,15 +29,14 @@
 .hookslist {
   display: none;
   position: absolute;
-  background-color: white;
+  background-color: rgb(137, 137, 137);
   min-width: 160px;
   box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
   z-index: 1;
   padding: 10px 0;
   list-style: none;
   border-radius: 5px;
-  margin: 0;
-  padding: 0;
+  margin: 10px;
 }
 
 .hookslist li {

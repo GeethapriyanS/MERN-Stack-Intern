@@ -15,7 +15,7 @@ const UseEffectAPIimage = ()=>{
     return(
         <div>
             <Navbar/>
-             <h1>This is UseEffectAPI Example</h1>
+             <h1>This is UseEffectAPI Example using Grid</h1>
              <div id="grid-container">  
                 {
                     posts.map((post)=>(

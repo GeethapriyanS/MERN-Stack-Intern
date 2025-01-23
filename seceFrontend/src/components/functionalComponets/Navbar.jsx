@@ -84,7 +84,27 @@ const Navbar = () => {
                 </li>
                 <li>
                   <Link to="/use-effect-api-img" className="link">
-                    UseEffectAPI
+                    UseEffectAPIimage
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/use-ref" className="link">
+                    UseRef
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/use-memo" className="link">
+                    UseMemo
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/use-callback" className="link">
+                    UseCallBack
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/use-reducer" className="link">
+                    UseReducer
                   </Link>
                 </li>
             </div>
