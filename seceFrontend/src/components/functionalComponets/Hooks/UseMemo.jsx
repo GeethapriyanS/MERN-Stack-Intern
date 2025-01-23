@@ -1,7 +1,7 @@
 import { useMemo, useState } from "react"
 import Navbar from "../Navbar";
 var slowfunction=(num)=>{
-    for(var slow=0;slow<100000;slow++){}
+    for(var slow=0;slow<100;slow++){}
     return num*2;
 }
 const UseMemo = ()=>{

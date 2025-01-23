@@ -31,10 +31,10 @@ const App = () => {
        <Route path="/use-state" element={<UseState />}></Route> 
        <Route path="/use-effect" element={<UseEffect />}></Route> 
        <Route path="/use-effect-api" element={<UseEffectAPI />}></Route> 
+       <Route path="/use-callback" element={<UseCallback />}></Route> 
        <Route path="/use-effect-api-img" element={<UseEffectAPIimage />}></Route> 
        <Route path="/use-ref" element={<UseRef />}></Route> 
        <Route path="/use-memo" element={<UseMemo />}></Route> 
-       <Route path="/use-callback" element={<UseCallback />}></Route> 
        <Route path="/use-reducer" element={<UseReducer />}></Route> 
        <Route path="/about" element={<About Hello="Geethapriyan" />}></Route> {/* props Example */}
        <Route path="/profile" element={<Profile name="Geethapriyan S" age={20} profession="Developer" />}></Route>
