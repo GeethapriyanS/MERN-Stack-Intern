@@ -1,14 +1,9 @@
 import Home from "./components/functionalComponets/Home";
-import Button  from "./components/functionalComponets/Button";
 import Card from "./components/functionalComponets/Card";
 import Footer from "./components/functionalComponets/Footer";
-import Header from "./components/functionalComponets/Header";
 import Profile from "./components/functionalComponets/Profile";
-import ClassCompEG from "./components/classComponents/classCompEG";
-import Gallery from "./components/classComponents/Gallery";
 import About from "./components/functionalComponets/About";
 import Contact from "./components/functionalComponets/contact";
-import Navbar from "./components/functionalComponets/Navbar";
 import {BrowserRouter ,Routes ,Route} from 'react-router-dom';
 import SignUp from "./components/functionalComponets/SignUp";
 import UseState from "./components/functionalComponets/Hooks/UseState";
