@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "../../css/Navbar.css";
-import "../../css/UseEffectAPIimage.css"
+import "../../css/UseEffectAPIimage.css";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
@@ -67,62 +67,67 @@ const Navbar = () => {
           <li className="drop">
             <span className="link">Hooks</span>
             <div className="hookslist">
-                 <li>
-                  <Link to="/react-life-cycle" className="link">
-                    LifeCycle
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/use-state" className="link">
-                    useState
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/use-effect" className="link">
-                    UseEffect
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/use-effect-api" className="link">
-                    UseEffectAPI
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/use-effect-api-img" className="link">
-                    UseEffectAPIimage
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/use-ref" className="link">
-                    UseRef
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/use-memo" className="link">
-                    UseMemo
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/use-callback" className="link">
-                    UseCallBack
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/use-reducer" className="link">
-                    UseReducer
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/use-context" className="link">
-                    UseContext
-                  </Link>
-                </li>
+              <li>
+                <Link to="/react-life-cycle" className="link">
+                  LifeCycle
+                </Link>
+              </li>
+              <li>
+                <Link to="/use-state" className="link">
+                  useState
+                </Link>
+              </li>
+              <li>
+                <Link to="/use-effect" className="link">
+                  UseEffect
+                </Link>
+              </li>
+              <li>
+                <Link to="/use-effect-api" className="link">
+                  UseEffectAPI
+                </Link>
+              </li>
+              <li>
+                <Link to="/use-effect-api-img" className="link">
+                  UseEffectAPIimage
+                </Link>
+              </li>
+              <li>
+                <Link to="/use-ref" className="link">
+                  UseRef
+                </Link>
+              </li>
+              <li>
+                <Link to="/use-memo" className="link">
+                  UseMemo
+                </Link>
+              </li>
+              <li>
+                <Link to="/use-callback" className="link">
+                  UseCallBack
+                </Link>
+              </li>
+              <li>
+                <Link to="/use-reducer" className="link">
+                  UseReducer
+                </Link>
+              </li>
+              <li>
+                <Link to="/use-context" className="link">
+                  UseContext
+                </Link>
+              </li>
             </div>
           </li>
-          <li>
-            <Link to="/memo" className="link">
-              React.memo
-            </Link>
+          <li className="drop">
+            <span className="link">Memorization</span>
+            <div className="hookslist">
+              <li>
+                <Link to="/memo" className="link">
+                  React.memo
+                </Link>
+              </li>
+            </div>
           </li>
           <li>
             <Link to="/" className="link">
