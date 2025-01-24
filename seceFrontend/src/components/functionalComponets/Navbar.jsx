@@ -67,7 +67,12 @@ const Navbar = () => {
           <li className="drop">
             <span className="link">Hooks</span>
             <div className="hookslist">
-            <li>
+                 <li>
+                  <Link to="/react-life-cycle" className="link">
+                    LifeCycle
+                  </Link>
+                </li>
+                <li>
                   <Link to="/use-state" className="link">
                     useState
                   </Link>

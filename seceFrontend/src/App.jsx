@@ -14,6 +14,7 @@ import UseRef from "./components/functionalComponets/Hooks/UseRef";
 import UseMemo from "./components/functionalComponets/Hooks/UseMemo";
 import UseCallback from "./components/functionalComponets/Hooks/UseCallback";
 import UseReducer from "./components/functionalComponets/Hooks/UseReducer";
+import ReactLifeCycleMethod from "./components/classComponents/ReactLifeCyleMethod";
 
 const App = () => {
   return (
@@ -23,6 +24,7 @@ const App = () => {
        <Route path="/" element={<SignUp />}></Route>
        <Route path="/home" element={<Home />}></Route>
        <Route path="/card" element={<Card title="Introduction" description="This is a simple card component." />}></Route>
+       <Route path="/react-life-cycle" element={<ReactLifeCycleMethod />}></Route>
        <Route path="/use-state" element={<UseState />}></Route> 
        <Route path="/use-effect" element={<UseEffect />}></Route> 
        <Route path="/use-effect-api" element={<UseEffectAPI />}></Route> 
