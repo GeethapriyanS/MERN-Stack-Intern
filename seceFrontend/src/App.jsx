@@ -15,6 +15,9 @@ import UseMemo from "./components/functionalComponets/Hooks/UseMemo";
 import UseCallback from "./components/functionalComponets/Hooks/UseCallback";
 import UseReducer from "./components/functionalComponets/Hooks/UseReducer";
 import ReactLifeCycleMethod from "./components/classComponents/ReactLifeCyleMethod";
+import Student from "./components/functionalComponets/Hooks/UseContext";
+import Memo from "./components/functionalComponets/Memorization/Memo";
+
 
 const App = () => {
   return (
@@ -31,7 +34,9 @@ const App = () => {
        <Route path="/use-callback" element={<UseCallback />}></Route> 
        <Route path="/use-effect-api-img" element={<UseEffectAPIimage />}></Route> 
        <Route path="/use-ref" element={<UseRef />}></Route> 
+       <Route path="/use-context" element={<Student />}></Route> 
        <Route path="/use-memo" element={<UseMemo />}></Route> 
+       <Route path="/memo" element={<Memo />}></Route> 
        <Route path="/use-reducer" element={<UseReducer />}></Route> 
        <Route path="/about" element={<About Hello="Geethapriyan" />}></Route> {/* props Example */}
        <Route path="/profile" element={<Profile name="Geethapriyan S" age={20} profession="Developer" />}></Route>

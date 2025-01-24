@@ -112,9 +112,18 @@ const Navbar = () => {
                     UseReducer
                   </Link>
                 </li>
+                <li>
+                  <Link to="/use-context" className="link">
+                    UseContext
+                  </Link>
+                </li>
             </div>
           </li>
-
+          <li>
+            <Link to="/memo" className="link">
+              React.memo
+            </Link>
+          </li>
           <li>
             <Link to="/" className="link">
               Logout
