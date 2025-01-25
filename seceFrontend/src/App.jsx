@@ -17,6 +17,9 @@ import UseReducer from "./components/functionalComponets/Hooks/UseReducer";
 import ReactLifeCycleMethod from "./components/classComponents/ReactLifeCyleMethod";
 import Student from "./components/functionalComponets/Hooks/UseContext";
 import Memo from "./components/functionalComponets/Memorization/Memo";
+import LazyLoad from "./components/functionalComponets/Memorization/LazyLoadingWithSuspense";
+import UseLocalStorage from "./components/functionalComponets/Hooks/useLocalStorage";
+import HoC from "./components/functionalComponets/Hoc/HoC";
 
 
 const App = () => {
@@ -26,14 +29,17 @@ const App = () => {
       <Routes>
        <Route path="/" element={<SignUp />}></Route>
        <Route path="/home" element={<Home />}></Route>
+       <Route path="/hoc" element={<HoC />}></Route>
        <Route path="/card" element={<Card title="Introduction" description="This is a simple card component." />}></Route>
        <Route path="/react-life-cycle" element={<ReactLifeCycleMethod />}></Route>
        <Route path="/use-state" element={<UseState />}></Route> 
        <Route path="/use-effect" element={<UseEffect />}></Route> 
        <Route path="/use-effect-api" element={<UseEffectAPI />}></Route> 
+       <Route path="/use-custom" element={<UseLocalStorage />}></Route> 
        <Route path="/use-callback" element={<UseCallback />}></Route> 
        <Route path="/use-effect-api-img" element={<UseEffectAPIimage />}></Route> 
        <Route path="/use-ref" element={<UseRef />}></Route> 
+       <Route path="/lazy" element={<LazyLoad />}></Route> 
        <Route path="/use-context" element={<Student />}></Route> 
        <Route path="/use-memo" element={<UseMemo />}></Route> 
        <Route path="/memo" element={<Memo />}></Route> 

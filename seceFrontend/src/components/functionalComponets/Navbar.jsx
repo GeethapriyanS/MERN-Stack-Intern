@@ -23,11 +23,11 @@ const Navbar = () => {
               Card
             </Link>
           </li>
-          <li>
+          {/* <li>
             <Link to="/about" className="link">
               About
             </Link>
-          </li>
+          </li> */}
           <li>
             <Link to="/profile" className="link">
               Profile
@@ -117,6 +117,11 @@ const Navbar = () => {
                   UseContext
                 </Link>
               </li>
+              <li>
+                <Link to="/use-custom" className="link">
+                  UseLocalStorage
+                </Link>
+              </li>
             </div>
           </li>
           <li className="drop">
@@ -124,10 +129,20 @@ const Navbar = () => {
             <div className="hookslist">
               <li>
                 <Link to="/memo" className="link">
-                  React.memo
+                  Memo
+                </Link>
+              </li>
+              <li>
+                <Link to="/lazy" className="link">
+                  lazy,suspense
                 </Link>
               </li>
             </div>
+          </li>
+          <li>
+            <Link to="/hoc" className="link">
+              HoC
+            </Link>
           </li>
           <li>
             <Link to="/" className="link">
