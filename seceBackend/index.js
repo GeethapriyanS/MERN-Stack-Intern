@@ -60,6 +60,9 @@ app.post('/login',async (req,res)=>{
     console.log("unSuccessful")
  }
 });
+app.post("/updatedet",async (res,req)=>{
+    var user=await Signup.findOneandUpdate({firstName:"Geethu",})
+})
 app.listen(1001,()=>{
     console.log("Server Started");
 });
