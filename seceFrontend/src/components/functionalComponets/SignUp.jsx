@@ -9,7 +9,7 @@ const SignUp = ()=>{
             <div className="text">
                Signup Form
             </div>
-            <form method="post" action="http://localhost:1001/signup">
+            <form method="post" action="https://mern-2025-du77.onrender.com/signup">
             <div className="data">
                     <label htmlFor="name">firstName</label>
                     <input type="text" name="firstName" placeholder="enter your firstname" required/>
