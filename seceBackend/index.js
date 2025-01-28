@@ -2,10 +2,11 @@ const express=require("express");
 const path=require("path");
 const mdb=require('mongoose');
 const dotenv=require("dotenv");
-let  Signup = require('./models/signupSchema');
+const  Signup = require('./models/signupSchema');
 const app=express();
-app.use(express.json())
 dotenv.config();
+app.use(express.urlencoded());
+app.use(express.json())
 
 mdb.connect(process.env.MONGODB_URL).then(()=>{
     console.log("MongoDB Connection Sucessful")
@@ -22,7 +23,7 @@ app.get('/json',(req,res)=>{
     res.json({"Name":"Geethapriyan"});
 });
 
-app.post('/signup', async (req,res)=>{
+app.post('/signup',(req,res)=>{
     var {firstName,lastName,username,email,password}=req.body;
     console.log(req.body)
     try{ 
@@ -33,15 +34,32 @@ app.post('/signup', async (req,res)=>{
         email:email,
         password:password,
     });
-    console.log(newCustomer);
-    await newCustomer.save()
-    .then((res)=>{console.log(res)});
+    newCustomer.save();
     res.status(201).send("Signup Sucessful");
+    console.log("value recived")
  }catch(err){
-    res.status(400).send("Signup Not Sucessful",err);
+    res.status(401).send("yooo!")
+    console.log("unSuccessful")
  }
 });
 
+app.post('/login',async (req,res)=>{
+    var {email,password}= req.body;
+    console.log(req.body)
+    try{ 
+    var user=await Signup.findOne({email});
+    if(!user || user.password!=password){
+       return res.status(400).send("LoginUnSucessful");
+    }
+    if(user.password!=password){
+       return res.status(400).send("Login Sucessful");
+    }
+   return res.status(201).send("Login Sucessful");
+ }catch(err){
+    res.status(401).send("yooo!")
+    console.log("unSuccessful")
+ }
+});
 app.listen(1001,()=>{
     console.log("Server Started");
 });

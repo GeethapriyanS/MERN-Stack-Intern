@@ -20,6 +20,7 @@ import Memo from "./components/functionalComponets/Memorization/Memo";
 import LazyLoad from "./components/functionalComponets/Memorization/LazyLoadingWithSuspense";
 import UseLocalStorage from "./components/functionalComponets/Hooks/useLocalStorage";
 import HoC from "./components/functionalComponets/Hoc/HoC";
+import Login from "./components/functionalComponets/Login";
 
 
 const App = () => {
@@ -27,7 +28,8 @@ const App = () => {
     <>
      <BrowserRouter>
       <Routes>
-       <Route path="/" element={<SignUp />}></Route>
+       <Route path="/signup" element={<SignUp />}></Route>
+       <Route path="/login" element={<Login />}></Route>
        <Route path="/home" element={<Home />}></Route>
        <Route path="/hoc" element={<HoC />}></Route>
        <Route path="/card" element={<Card title="Introduction" description="This is a simple card component." />}></Route>

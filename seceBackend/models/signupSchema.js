@@ -1,6 +1,5 @@
 const mdb= require('mongoose');
-let Schema=mdb.Schema;
-const signupSchema = new Schema({
+const signupSchema = mdb.Schema({
     firstName:String,
     lastName:String,
     username:String,
