@@ -4,10 +4,12 @@ const mdb=require('mongoose');
 const dotenv=require("dotenv");
 const  Signup = require('./models/signupSchema');
 const bcrypt=require('bcrypt');
+const cors=require('cors');
 const app=express();
 dotenv.config();
 app.use(express.urlencoded());
 app.use(express.json())
+app.use(cors());
 
 mdb.connect(process.env.MONGODB_URL).then(()=>{
     console.log("MongoDB Connection Sucessful")
@@ -38,7 +40,7 @@ app.post('/signup',async (req,res)=>{
         password:hashedPassword,
     });
     newCustomer.save();
-    res.status(201).send("Signup Sucessful");
+    res.status(201).json({response:"Signup Successful",signupStatus:false});
     console.log("value recived")
  }catch(err){
     res.status(401).send("yooo!")
