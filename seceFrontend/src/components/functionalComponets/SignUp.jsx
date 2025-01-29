@@ -12,6 +12,7 @@ const SignUp = ()=>{
   var [email, setEmail] = useState("");
   var [password, setPassword] = useState("");
   var navigate = useNavigate();
+  
   const handleSignup = async (event) => {
     event.preventDefault();
     console.log("Event Triggered");

@@ -50,21 +50,23 @@ app.post('/signup',async (req,res)=>{
 
 app.post('/login',async (req,res)=>{
     var {email,password}= req.body;
-    console.log(req.body)
+    console.log(req.body);
     try{ 
     var user=await Signup.findOne({email});
-    if(!user || user.password!=password){
-       return res.status(400).send("Login UnSucessful");
+    if (!user) {
+        return res.status(404).json({ message: "User not found" });
     }
-    if(user.password!=password){
-       return res.status(400).send("Login Sucessful");
+    const isMatch = await bcrypt.compare(password, user.password);
+    if (!isMatch) {
+        return res.status(401).json({ message: "Invalid password" });
     }
-   return res.status(201).send("Login Sucessful");
- }catch(err){
-    res.status(401).send("yooo!")
-    console.log("unSuccessful")
- }
-});
+    console.log("insiide try");
+    res.status(201).json({ message: "Login successful", user });
+    } catch (error) {
+    console.error(error);
+    console.log("insiide catch");
+    res.status(500).json({ message: "Internal server error" });
+}});
 
 app.get("/getsignupdet", async (req, res) => {
     var signUpdet = await Signup.find();
@@ -74,7 +76,7 @@ app.get("/getsignupdet", async (req, res) => {
 app.post("/updatedet", async(req, res) => {
     var updateRec = await Signup.findOneAndUpdate(
       { username: "Geethu" },
-      { $set: { username: "abi2006" } }
+      { $set: { username: "bala" } }
     );
     console.log(updateRec);
     updateRec.save()
