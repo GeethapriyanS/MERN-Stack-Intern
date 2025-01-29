@@ -3,6 +3,7 @@ import "../../css/SignUp.css"
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import {Link} from 'react-router-dom';
 
 const SignUp = ()=>{
 
@@ -11,13 +12,13 @@ const SignUp = ()=>{
   var [username, setUsername] = useState("");
   var [email, setEmail] = useState("");
   var [password, setPassword] = useState("");
-  var navigate = useNavigate();
+  var navigator = useNavigate();
   
   const handleSignup = async (event) => {
     event.preventDefault();
     console.log("Event Triggered");
     try {
-      const req = await axios.post("https://mern-2025-du77.onrender.com/signup", {
+      const req = await axios.post("http://localhost:1001/signup", {
         firstName: firstName,
         lastName: lastName,
         username: username,
@@ -25,9 +26,8 @@ const SignUp = ()=>{
         password: password,
       });
       console.log(req);
-      alert(req.data.response);
       if (req.data.signupStatus) {
-        navigate("/home");
+        navigator("/home");
       }
     } catch (err) {
       console.log(err);
@@ -63,6 +63,7 @@ const SignUp = ()=>{
                 </div>
                 <button type='submit'>sumbit</button>
             </form>
+            <Link to='/login'>Already hava an account</Link>
         </div>
         </div>
   )

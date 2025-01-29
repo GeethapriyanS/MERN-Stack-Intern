@@ -19,7 +19,7 @@ const Login = ()=>{
           });
           console.log(req);
           alert(req.data.message);
-          if (req.data.user) {
+          if (req.data.Loginstatus) {
             navigate("/home");
           }
         } catch (err) {
